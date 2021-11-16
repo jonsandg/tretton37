@@ -1,0 +1,18 @@
+.app {
+  width: 70%;
+  margin: auto;
+}
+
+.toolbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 1rem;
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 0.5rem;
+  }
+}

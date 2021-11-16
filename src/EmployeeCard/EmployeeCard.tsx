@@ -14,7 +14,7 @@ type EmployeeCardProps = {
   data: EmployeeAPIData;
 };
 
-export const EmployeeCard = ({ data }: EmployeeCardProps) => {
+export const EmployeeCard = React.memo(({ data }: EmployeeCardProps) => {
   const { name, office, imagePortraitUrl, gitHub, linkedIn, twitter } = data;
 
   return (
@@ -60,4 +60,4 @@ export const EmployeeCard = ({ data }: EmployeeCardProps) => {
       </div>
     </div>
   );
-};
+});

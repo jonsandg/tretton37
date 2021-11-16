@@ -8,7 +8,7 @@ type EmployeeListProps = {
   employees: EmployeeAPIData[];
 };
 
-export const EmployeeList = ({ employees }: EmployeeListProps) => {
+export const EmployeeList = React.memo(({ employees }: EmployeeListProps) => {
   return (
     <div className={styles.container}>
       {employees.map((e) => (
@@ -16,4 +16,4 @@ export const EmployeeList = ({ employees }: EmployeeListProps) => {
       ))}
     </div>
   );
-};
+});
