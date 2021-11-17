@@ -15,7 +15,7 @@ export const App = () => {
 
   // Basic filtering by name or office. The two strings merged to one and then checked if it contains the filter query
   const filteredEmployees = employees.filter((employee) => {
-    return (employee.name + employee.office)
+    return (employee.name + ' ' + employee.office)
       .toLowerCase()
       .includes(filterQuery.toLowerCase());
   });
