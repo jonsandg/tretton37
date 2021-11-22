@@ -19,7 +19,7 @@ export const EmployeeCard = React.memo(({ data }: EmployeeCardProps) => {
   const { name, office, imagePortraitUrl, gitHub, linkedIn, twitter } = data;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-cy="employee-card">
       <img
         className={styles.image}
         src={imagePortraitUrl || UserPlaceholderImage}
