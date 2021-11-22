@@ -1,19 +1,42 @@
+@use 'styles/colors';
+@use 'styles/values';
+
 .app {
-  width: 70%;
   margin: auto;
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: values.$four-cards-breakpoint) {
+  .app {
+    width: values.$four-cards-width;
+  }
+}
+
+@media only screen and (min-width: values.$full-width-breakpoint) and (max-width: values.$four-cards-breakpoint) {
+  .app {
+    width: values.$three-cards-width;
+  }
+}
+
+@media only screen and (max-width: values.$full-width-breakpoint) {
+  .app {
+    width: calc(100% - 1rem);
+
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
 }
 
 .toolbar {
   background-color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
-  padding: 1rem;
+  padding: 0.5rem;
 
   input {
     width: 100%;
     box-sizing: border-box;
-
     padding: 0.5rem;
   }
 }

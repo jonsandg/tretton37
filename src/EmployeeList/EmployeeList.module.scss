@@ -1,7 +1,9 @@
+@use 'styles/values';
+
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(values.$card-min-width, 1fr));
+  gap: values.$grid-gap;
   align-items: stretch;
   grid-auto-rows: 1fr;
 }

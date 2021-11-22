@@ -1,0 +1,8 @@
+$card-min-width: 225px;
+$grid-gap: 20px;
+
+$four-cards-width: $card-min-width * 4 + $grid-gap * 3;
+$three-cards-width: $card-min-width * 3 + $grid-gap * 2;
+
+$full-width-breakpoint: $three-cards-width + 20px;
+$four-cards-breakpoint: $four-cards-width + 200px;

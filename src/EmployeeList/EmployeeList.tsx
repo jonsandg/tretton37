@@ -18,7 +18,7 @@ export const EmployeeList = ({ employees }: EmployeeListProps) => {
   // in this case the last of the employee cards currently showing
   const observer = useRef<IntersectionObserver>();
   const lastEmployeeCardRef = useCallback(
-    (node) => {
+    (node: HTMLDivElement) => {
       if (observer.current) {
         observer.current.disconnect();
       }

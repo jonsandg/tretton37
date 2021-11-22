@@ -1,7 +1,13 @@
+@use 'styles/colors';
+@use 'styles/values';
+
 .container {
   height: 100%;
   background-color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+
+  box-sizing: border-box;
 }
 
 .image {
@@ -16,8 +22,8 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 1rem;
-  line-height: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
 
   p {
     margin: 0;
@@ -29,7 +35,7 @@
 }
 
 .office {
-  color: #696f7b;
+  color: colors.$light-gray;
 
   svg {
     margin-right: 0.5rem;
@@ -37,14 +43,19 @@
 }
 
 .social {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -0.3rem;
 
   a {
     color: inherit;
   }
 
   svg {
-    margin-left: 0.5rem;
+    padding-left: 0.3rem;
     cursor: pointer;
 
     &:hover {
