@@ -8,6 +8,7 @@ import {
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './EmployeeCard.module.scss';
+import UserPlaceholderImage from 'images/placeholder-user.png';
 import { EmployeeAPIData } from 'api';
 
 type EmployeeCardProps = {
@@ -19,7 +20,11 @@ export const EmployeeCard = React.memo(({ data }: EmployeeCardProps) => {
 
   return (
     <div className={styles.container}>
-      <img className={styles.image} src={imagePortraitUrl!} alt={name} />
+      <img
+        className={styles.image}
+        src={imagePortraitUrl || UserPlaceholderImage}
+        alt={name}
+      />
       <div className={styles.info}>
         <div>
           <p className={styles.name}>{name}</p>
