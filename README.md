@@ -55,7 +55,7 @@ Top component where most of the state lives. In charge of getting employee data 
 
 Stateless component only concerned with the visual aspects of each employee card in the grid.
 
-### [EmployeeList](src/EmployeeCard)
+### [EmployeeList](src/EmployeeList)
 
 Component responsible for rendering the EmployeeCards and where all the infinity scroll logic is.
 
