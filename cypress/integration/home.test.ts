@@ -1,7 +1,10 @@
 describe('tretton37 ninjas app', () => {
   beforeEach(() => {
+    cy.intercept('GET', '/v3/employees', {
+      fixture: 'employees',
+    }).as('GETemployees');
+
     cy.visit('/');
-    cy.intercept('GET', '**/employees').as('GETemployees');
     cy.wait('@GETemployees');
   });
 
@@ -23,11 +26,11 @@ describe('tretton37 ninjas app', () => {
 
   describe('Cards', () => {
     it('should display employee name', () => {
-      cy.get('[data-cy="employee-card"]').first().findByText('Agron Kabashi');
+      cy.get('[data-cy="employee-card"]').first().contains('Eunice Langston');
     });
 
     it('should display employee office', () => {
-      cy.get('[data-cy="employee-card"]').first().findByText('Lund');
+      cy.get('[data-cy="employee-card"]').first().contains('Helsingborg');
     });
 
     it('should have link to github', () => {
@@ -54,7 +57,7 @@ describe('tretton37 ninjas app', () => {
 
   describe('Filtering', () => {
     it('should be possible to filter by name', () => {
-      cy.get('input').type('Gorazd Vasiljević');
+      cy.get('input').type('Nelle Jenkison');
       cy.get('[data-cy="employee-card"]').should('have.length', 1);
     });
 
